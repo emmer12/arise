@@ -8,12 +8,17 @@ body {
     /* top:70px; */
     left: 0px;
     position: relative;
+    clip-path:url(#myClipSlider);
 }
 .carousel {
     position: static !important;
 }
 .carousel-inner {
     height: 550px;
+
+}
+.carousel-item{
+    background-repeat: no-repeat;
 }
 
 .carousel-caption {
@@ -234,12 +239,53 @@ body {
 
 
 .page-footer{
-    background:#333;
-    color:rgba(255, 255, 255, 0.7);
-    padding:10px
+    background:rgb(0, 21, 36);;
+    color: rgba(255, 255, 255, 0.63);
+    padding:80px 10px;
+    clip-path:url(#myClip);
+    height:300px;
 }
 
 
+.page-footer h4{
+    color:rgba(236, 185, 74, 0.843);
+    font-size:16px;
+    font-weight: 700;
+    
+}
+
+.page-footer p{
+    line-height: 25px;
+    font-size: 100%;
+}
+
+
+ li{
+ list-style: none;
+
+}
+
+
+.page-footer a{
+    color:inherit;
+    transition:0.3s;
+    -webkit-transition:0.3s;
+    -moz-transition:0.3s;
+    -ms-transition:0.3s;
+    -o-transition:0.3s;
+}
+
+.page-footer a:hover{
+    color:rgba(236, 185, 74, 0.843);
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+
+
+.footer-copyright{
+    border-top: 1px solid rgba(255, 255, 255, 0.63);
+}
 .nav-bar-mobile {
     padding:0px 10px
 }
@@ -285,7 +331,7 @@ body {
 
     .carousel-caption {
         width: 90%;
-        padding-top: 20px;
+        padding-top: 50%;
         margin-left: -40px;
     }
     .carousel-caption h3 {
@@ -293,5 +339,8 @@ body {
     }
     .carousel-caption p {
         font-size: 16px;
+    }
+    .page-footer{
+        clip-path:none;
     }
 }
