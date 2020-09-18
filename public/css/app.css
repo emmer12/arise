@@ -87,7 +87,15 @@
   -o-border-radius: 5px;
 }
 
-.nav-bar .c-btn {
+.nav-bar a {
+  color: #ecba4a;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.c-btn {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -100,16 +108,8 @@
   position: relative;
 }
 
-.nav-bar .c-btn:hover {
+.c-btn:hover {
   background: rgba(133, 17, 17, 0.4);
-}
-
-.nav-bar .c-btn a {
-  color: #ecba4a;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  font-weight: 700;
 }
 
 /*!

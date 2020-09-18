@@ -90,22 +90,7 @@
         
     }
     
-    & .c-btn{
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        padding: 5px 20px;
-        background-color: $primary;
-        float:right;
-        margin-top: 20px;
-        position: relative;
-
-
-        &:hover{
-            background:rgba(133, 17, 17, 0.4);
-        }
+   
 
         & a{
             color:$textSecondary;
@@ -117,4 +102,20 @@
         }
 
 }
+.c-btn{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px 20px;
+    background-color: $primary;
+    float:right;
+    margin-top: 20px;
+    position: relative;
+
+
+    &:hover{
+        background:rgba(133, 17, 17, 0.4);
+    }
 }
