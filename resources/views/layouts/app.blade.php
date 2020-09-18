@@ -21,10 +21,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+
+   
+ 
 </head>
 
 <body>
-    <div id="app">
+    <div id="">
        @include('partials.nav')
         <main class="">
             @yield('content')
@@ -32,5 +35,13 @@
       @include('partials.footer')
        
     </div>
+
+    <script>
+        let el=document.querySelector('#bar');
+        let drop=document.querySelector('.drop');
+        el.addEventListener('click',function(e){
+             drop.classList.toggle('added')          
+        })
+    </script>
 </body>
 </html>

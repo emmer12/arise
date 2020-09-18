@@ -21,8 +21,12 @@
             <h4>Connect</h4>
              <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:070373836363">+2340938373563<a> </div>
              <div><i class="fa fa-evelope" aria-hidden="true"></i> Email Address</div>
-             <div>
-                 Socail links </div>
+             <div class="socials">
+                 <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                 <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                 <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                 <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
            </div>
         </div>
     </div>
