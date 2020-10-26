@@ -6,7 +6,7 @@
             <li data-target="#carouselId" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox" style="width:100%">
-            <div class="carousel-item active min-vh-100" style="background:url({{ asset('images/slider/1.jpg') }}) no-repeat;background-size:cover">
+            <div class="carousel-item active min-vh-100" style="background:url({{ asset('images/slider/slide1.jpg') }}) no-repeat;background-size:cover">
                 <!-- <img src="{{ asset('images/slider/1.jpg')}}" width="100%" alt="First slide"> -->
                 <div class="carousel-caption animated bounceInLeft" style="animation-delay:0.5s;">
                     <h3 class="animated bounceInLeft" style="animation-delay:0.8s">Leadership</h3>
@@ -14,7 +14,7 @@
                     <button class="btn btn-primary animated zoomIn" style="animation-delay:1s">Learn more</button>
                 </div>
             </div>
-            <div class="carousel-item min-vh-100" style="background:url({{ asset('images/slider/2.jpg') }}) no-repeat;background-size:cover">
+            <div class="carousel-item min-vh-100" id="bg2" style="background:url({{ asset('images/slider/slide2.jpg') }}) no-repeat;background-size:cover">
                 <div class="carousel-caption animated bounceInRight" style="animation-delay:0.5s">
                     <h3 class="animated bounceInLeft" style="animation-delay:0.8s">Let's go global</h3>
                     <p>Description</p>

@@ -6,5 +6,6 @@
     @include('partials/visions')
     @include('partials/featured-product')
     @include('partials/upcomming')
-</div>
+    <!-- Button trigger modal -->
+   
 @endsection

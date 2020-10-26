@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Notifications\BookPaid;
+use App\Notifications\sendWelcome;
+use App\Notifications\InvoicePaid;
+
 
 class User extends Authenticatable
 {
@@ -16,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'fullname', 'email', 'password','phone','nickname'
     ];
 
     /**
@@ -36,4 +40,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+    public function sendBooking($product){
+        $this->notify(new InvoicePaid($product));
+    } 
+
+    public function sendWelcome($user){
+        $this->notify(new sendWelcome($user));
+    } 
+
+
+    public function invoice()
+    {
+        return $this->hasMany('App\Payment');
+    }
+    
 }

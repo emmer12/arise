@@ -5,8 +5,11 @@
     <div class="container">
         <div class="row">
            <div class="col-md-4">
-               <h4>LOGO</h4>
-               <p>lorem this is about the vision it must be plain </p>
+             <a href='/' class="wow slideInLeft">
+                <img src="/images/logo.png" style="height:50px;width:80px;position:relative;" alt="" class=""/>
+              </a>
+               <p>Ariseroom  International  is  a  faith-based,  non-profit  and  non-governmental  organization  that 
+                directly engages and inspires  transformation in every  strata of the nation</p>
            </div>
            <div class="col-md-4">
                <h4>Important link</h4>
@@ -22,17 +25,17 @@
              <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:070373836363">+2340938373563<a> </div>
              <div><i class="fa fa-evelope" aria-hidden="true"></i> Email Address</div>
              <div class="socials">
-                 <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
-                 <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                 <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                 <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                 <a href="https://www.facebook.com/ariseroominternational/" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                 <a href="https://twitter.com/ariseroomintl?s=08"  target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                 <a href="https://www.instagram.com/invites/contact/?i=10hiay5oyiezf&utm_content=hrve33a"  target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                 <!-- <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a> -->
             </div>
            </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2016 Copyright Text
+            © {{ date('Y') }} Copyright Text
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
     </div>

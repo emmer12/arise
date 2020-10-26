@@ -1,0 +1,63 @@
+Run the command to generate a new notification and pass in the markdown option, e.g: php artisan make:notification InvoicePaid --markdown=mail.invoice.paid
+Open the newly created template, e.g: views/mail/invoice/paid.blade.php
+Add as many buttons as you like, e.g:
+
+@component('mail::message')
+  # Introduction
+
+  @component('mail::button', ['url' => $url1])
+  Button 1 Text
+  @endcomponent
+
+  @component('mail::button', ['url' => $url2])
+  Button 2 Text
+  @endcomponent
+
+  @component('mail::button', ['url' => $url3])
+  Button 3 Text
+  @endcomponent
+
+  Thanks,<br>
+  {{ config('app.name') }}
+@endcomponent
+Replace your calls to SimpleMessage methods with a reference to your markdown template when constructing your email, e.g:
+
+return (new MailMessage)
+  ->subject($this->options['subject'])
+  ->markdown('mail.invoice.paid', $this->options);
+
+
+
+
+
+
+
+
+  @component('mail::message')
+# Dear, {{$content['name']}}
+
+You are receiving this email because we received a signup request for your this mail account.
+
+@component('mail::button', ['url' => 'website.com')])
+Click Here
+@endcomponent
+
+If you did not request a signup , no further action is required.
+
+Thanks,
+{{ config('app.name') }}
+@endcomponent
+
+
+
+
+
+@component('mail::button', ['url' => $url, 'color' => 'success'])
+View Order
+@endcomponent
+
+
+
+@component('mail::panel')
+This is the panel content.
+@endcomponent

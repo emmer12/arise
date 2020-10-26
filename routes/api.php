@@ -16,4 +16,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+
 });
+
+Route::group(['middleware' => ['auth']], function () {
+Route::post('create-product','ProductController@create');
+Route::post('/create-blog','BlogController@store');
+Route::delete('/delete-all/{id}','BlogController@destroy');
+
+});
+
+
+
+Route::patch('/edit-blog/{id}','BlogController@update');
+
+
+
+
+Route::get('/get-all','BlogController@getall');
+
+Route::get('/token',function(){
+    return csrf_token(); 
+});
+

@@ -10,7 +10,7 @@
     <title> ::Arise Room::</title>
     <!-- {{ config('app.name', '::Arise Room::') }} -->
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -33,15 +33,15 @@
             @yield('content')
         </main>
       @include('partials.footer')
-       
     </div>
-
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <script>
         let el=document.querySelector('#bar');
         let drop=document.querySelector('.drop');
         el.addEventListener('click',function(e){
              drop.classList.toggle('added')          
         })
+        new WOW().init()
     </script>
 </body>
 </html>
