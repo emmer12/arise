@@ -17,7 +17,7 @@
           <p>To breed a generation of  social  executives who will make their nations a place of possibilities, 
           ...
       </p>
-          <button class="btn btn-primary wow slideInUp"  data-toggle="modal" data-target="#v1">Learn More</button>
+          <button class="btn btn-primary"  data-toggle="modal" data-target="#v1">Learn More</button>
         </div>
       </div>
 
@@ -34,7 +34,7 @@
           <h4>Equip and empower individuals.</h4>
           <p>To equip and empower individuals with the tools to engage...</p>
 
-          <button class="btn btn-primary wow slideInUp" data-toggle="modal" data-target="#v2">Learn More</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#v2">Learn More</button>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -46,7 +46,7 @@
           <h4>Significant impact on their nation.</h4>
           <p>To help a generation discover and live out their potentials with significant...</p>
 
-          <button class="btn btn-primary wow slideInUp" data-toggle="modal" data-target="#v3">Learn More</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#v3">Learn More</button>
         </div>
       </div>
   

@@ -60,7 +60,7 @@
             </div>
           </div>
             <div class="col-md-6">
-              <div class="body">
+              <div class="body" style="overflow:hidden;">
                 <ul>
                   <li class="wow fadeInLeft" daa-wow-delay="0.2s">
                     To help a generation discover and live out their potentials with significant impact on their nation.

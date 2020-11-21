@@ -10,8 +10,7 @@
     <title> ::Arise Room::</title>
     <!-- {{ config('app.name', '::Arise Room::') }} -->
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" ></script>
-
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -27,13 +26,14 @@
 </head>
 
 <body>
-    <div id="">
+    <div id="app">
        @include('partials.nav')
         <main class="">
             @yield('content')
         </main>
-      @include('partials.footer')
+        @include('partials.footer')
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/wow.min.js') }}"></script>
     <script>
         let el=document.querySelector('#bar');

@@ -6,9 +6,10 @@
         <div class="row">
            <div class="col-md-4">
              <a href='/' class="wow slideInLeft">
-                <img src="/images/logo.png" style="height:50px;width:80px;position:relative;" alt="" class=""/>
+                <img src="/images/logo.png" style="height:45px;width:64px;position:relative;" alt="" class=""/>
               </a>
-               <p>Ariseroom  International  is  a  faith-based,  non-profit  and  non-governmental  organization  that 
+              <br>
+              <p>Ariseroom  International  is  a  faith-based,  non-profit  and  non-governmental  organization  that 
                 directly engages and inspires  transformation in every  strata of the nation</p>
            </div>
            <div class="col-md-4">

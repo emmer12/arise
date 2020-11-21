@@ -6,25 +6,25 @@
             <li data-target="#carouselId" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox" style="width:100%">
-            <div class="carousel-item active min-vh-100" style="background:url({{ asset('images/slider/slide1.jpg') }}) no-repeat;background-size:cover">
+            <div class="carousel-item active min-vh-100" style="background:url({{ asset('images/slider/img2.jpg') }}) no-repeat;background-size:cover">
                 <!-- <img src="{{ asset('images/slider/1.jpg')}}" width="100%" alt="First slide"> -->
                 <div class="carousel-caption animated bounceInLeft" style="animation-delay:0.5s;">
-                    <h3 class="animated bounceInLeft" style="animation-delay:0.8s">Leadership</h3>
-                    <p>He who walk must learn how to fly, you cannot <span>fly</span> into fly</p>
+                    <h3 class="animated bounceInLeft" style="animation-delay:0.8s">Cultivating  the young mind </h3>
+                    <p>We believe that a <span>mind</span> needs to be cultivated to become a great mind</p>
                     <button class="btn btn-primary animated zoomIn" style="animation-delay:1s">Learn more</button>
                 </div>
             </div>
-            <div class="carousel-item min-vh-100" id="bg2" style="background:url({{ asset('images/slider/slide2.jpg') }}) no-repeat;background-size:cover">
+            <div class="carousel-item min-vh-100" id="bg2" style="background:url({{ asset('images/slider/img5.jpg') }}) no-repeat;background-size:cover">
                 <div class="carousel-caption animated bounceInRight" style="animation-delay:0.5s">
-                    <h3 class="animated bounceInLeft" style="animation-delay:0.8s">Let's go global</h3>
-                    <p>Description</p>
+                    <h3 class="animated bounceInLeft" style="animation-delay:0.8s">Building a new breed</h3>
+                    <p>We build a new <span>breed</span> of individuals that are spiritually, socially and economically successful</p>
                     <button class="btn btn-primary animated zoomInUp" style="animation-delay:1s">Learn more</button>
                 </div>
             </div>
-            <div class="carousel-item min-vh-100"  style="background:url({{ asset('images/slider/3.jpg')  }}) no-repeat;background-size:cover">
+            <div class="carousel-item min-vh-100"  style="background:url({{ asset('images/slider/img3.jpg')  }}) no-repeat;background-size:cover">
                 <div class="carousel-caption animated bounceInLeft" style="animation-delay:0.5s">
-                    <h3 class="animated bounceInDown" style="animation-delay:0.8s">Arise Room</h3>
-                    <p  class="animated bounceInLeft"  style="animation-delay:1s">A thousand <span>mile</span> begings </p>
+                    <h3 class="animated bounceInDown" style="animation-delay:0.8s">Platform for learning</h3>
+                    <p  class="animated bounceInLeft"  style="animation-delay:1s">We provide platform for <span> learning principles</span> of nation building, leadership, politics and economic </p>
                     <button class="btn btn-primary animated bounceInUp" style="animation-delay:1.2s">Learn more</button>
                 </div>
             </div>

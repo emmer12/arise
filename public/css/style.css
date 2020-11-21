@@ -30,7 +30,9 @@ body {
 }
 .carousel-caption h3 {
     font-size: 4em;
-    font-weight: bolder;
+    font-weight: 900;
+    color:#ecba4a;
+
 }
 .carousel-caption p {
     font-size: 24px;
@@ -154,7 +156,15 @@ body {
     background:#fff;
     padding:10px;
     width:300px;
-    position: relative;  
+    position: relative;
+    height: 300px;
+    border-radius:10px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+    box-shadow:0px 25px 25px rgba(0, 0, 0, 0.2)
+
 }
 .book-card button{
     float:right
@@ -165,6 +175,8 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    object-fit: contain;
+    height:100%;
 }
 .book-card span{
     font-weight: 700;
@@ -202,12 +214,13 @@ body {
     -moz-border-radius:20px;
     -ms-border-radius:20px;
     -o-border-radius:20px;
-    transform:translateY(-30px);
-    -webkit-transform:translateY(-30px);
-    -moz-transform:translateY(-30px);
-    -ms-transform:translateY(-30px);
-    -o-transform:translateY(-30px);
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
     position:relative;
+    /* box-shadow:0px 25px 25px rgba(0, 0, 0, 0.2) */
 }
 .book-card h4{
     font-weight:14px;
@@ -232,10 +245,14 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    background:white;
+    background:#fff;
     padding:10px;
     position: relative;  
     cursor:pointer;
+    height:350px
+}
+.upcomming-card .img{
+    height:70%;
 }
 .upcomming-card .details{
     background:#320177;
@@ -245,10 +262,33 @@ body {
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     transform: translateY(-37px);
-    -webkit-transform:;
-    -moz-transform:;
-    -ms-transform:;
-    -o-transform:;
+    -webkit-transform: translateY(-37px);
+    -moz-transform: translateY(-37px);
+    -ms-transform: translateY(-37px);
+    -o-transform: translateY(-37px);
+}
+
+.upcomming-card .date{
+    position: absolute;
+    top:15px;
+    right:15px;
+    background:#ecba4a;
+    padding:10px;
+    text-align: center;
+
+}
+
+.upcomming-card .date h4{
+    font-weight:700
+}
+
+.upcomming-card .date span{
+    position: relative;
+    display: block;
+    margin-top: -10px;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 .upcomming-card h3{
     font-size:14px;
@@ -262,6 +302,8 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    height:100%;
+    object-fit: cover;
 }
 
 
@@ -637,13 +679,13 @@ margin: 10px 0px;
         background-position-x: center !important;
     }
     .carousel-item:nth-child(1){
-        background-position-x: right !important;
+        background-position-x: center !important;
     }
     .carousel-item:nth-child(2){
         background-position-x: center !important;
     }
     .carousel-item:nth-child(3){
-        background-position-x: center !important;
+        background-position-x: left !important;
     }
 
     .page-footer{

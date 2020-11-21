@@ -36,3 +36,6 @@ Route::get('/connect', 'HomeController@connect')->name('connect');
 
 
 Route::get('/b/{slug}', 'ProductController@show')->name('p.details');
+
+
+Route::get('dashboard/{any}','UserController@dashboard')->where('any','.*');

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-  {{-- <div id="app">
-    <dashboard></dashboard>
-  </div> --}}
 
-  <div class="dashboard">
+@if (Auth::user()->isAdmin)
+      <dashboard></dashboard>
+    @else
+    <div class="dashboard">
    
 
       <div class=" container">
@@ -71,5 +71,11 @@
 
 
   </div> 
+
+@endif
+  <div>
+  </div>
+
+ 
 @endsection
 

@@ -86,6 +86,12 @@ export default {
     color: #444;
     margin: auto;
     padding: 10px;
-    box-shadow: 2px 2px 4px 2px #ddd;
+    // box-shadow: 2px 2px 4px 2px #ddd;
+
+
+    input{
+      padding: 20px;
+      border-radius:0px
+    }
   }
 </style>

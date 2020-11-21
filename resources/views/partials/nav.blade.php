@@ -20,7 +20,7 @@
                </a>
               @endauth
               @guest
-                <button class="c-btn"><a href="/register">Join our community</a></button>
+                <a class="c-btn" href="/register">Join our community</a>
               @endguest
             </ul>
           </div>
@@ -35,7 +35,7 @@
       <div class="row">
         <div class="left col-xs-6">
           <a href='/'>
-            <img src="/images/logo.png" style="height:38px;width:65px;position:relative;margin-top:15px;" alt="" class=""/>
+            <img src="/images/logo.png" style="height:32px;width:50px;position:relative;margin-top:15px;" alt="" class=""/>
           </a>
         </div>
 

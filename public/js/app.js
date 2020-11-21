@@ -1929,6 +1929,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -6464,7 +6465,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".sidebar[data-v-040e2ab9] {\n  width: 300px;\n  margin-top: 10px;\n  background: white;\n  float: left;\n  height: 100vh;\n}\n.sidebar .sidebar-con[data-v-040e2ab9] {\n  height: 100%;\n  padding: 10px;\n  box-shadow: 2px 2px 4px #ccc;\n}\n.sidebar .sidebar-con ul[data-v-040e2ab9] {\n  margin: 0px;\n  padding: 0px;\n}\n.sidebar .sidebar-con ul li[data-v-040e2ab9] {\n  margin-bottom: 5px;\n  list-style: none;\n  padding: 10px;\n  background: #e6e8f173;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.sidebar .sidebar-con ul li.active[data-v-040e2ab9] {\n  color: #320177;\n  border-right: 4px solid #320177;\n  border-left: 4px solid #320177;\n}\n.body[data-v-040e2ab9] {\n  margin-left: 300px;\n  color: white;\n  padding: 10px;\n}", ""]);
+exports.push([module.i, ".sidebar[data-v-040e2ab9] {\n  width: 300px;\n  margin-top: 10px;\n  background: white;\n  float: left;\n  height: 100vh;\n}\n.sidebar .sidebar-con[data-v-040e2ab9] {\n  height: 100%;\n  padding: 10px;\n}\n.sidebar .sidebar-con ul[data-v-040e2ab9] {\n  margin: 0px;\n  padding: 0px;\n}\n.sidebar .sidebar-con ul li[data-v-040e2ab9] {\n  margin-bottom: 5px;\n  list-style: none;\n  padding: 5px 10px;\n  background: #e6e8f173;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.sidebar .sidebar-con ul li.active[data-v-040e2ab9] {\n  color: #320177;\n  border-right: 4px solid #320177;\n  border-left: 4px solid #320177;\n}\n.body[data-v-040e2ab9] {\n  margin-left: 300px;\n  color: white;\n  padding: 10px;\n}", ""]);
 
 // exports
 
@@ -6483,7 +6484,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".product-form[data-v-6b0c4c45] {\n  max-width: 500px;\n  background: #fcfcff;\n  color: #444;\n  margin: auto;\n  padding: 10px;\n  box-shadow: 2px 2px 4px 2px #ddd;\n}", ""]);
+exports.push([module.i, ".product-form[data-v-6b0c4c45] {\n  max-width: 500px;\n  background: #fcfcff;\n  color: #444;\n  margin: auto;\n  padding: 10px;\n}\n.product-form input[data-v-6b0c4c45] {\n  padding: 20px;\n  border-radius: 0px;\n}", ""]);
 
 // exports
 
@@ -38322,6 +38323,8 @@ var staticRenderFns = [
     return _c("div", { staticClass: "sidebar" }, [
       _c("div", { staticClass: "sidebar-con" }, [
         _c("ul", [
+          _c("li", [_vm._v("Mindshift")]),
+          _vm._v(" "),
           _c("li", { staticClass: "active" }, [_vm._v("Products")]),
           _vm._v(" "),
           _c("li", [_vm._v("Events")]),
