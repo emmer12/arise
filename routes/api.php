@@ -22,6 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => ['auth']], function () {
 Route::post('create-product','ProductController@create');
 Route::post('/create-blog','BlogController@store');
+Route::post('/upload-file','ProductController@upload');
 Route::delete('/delete-all/{id}','BlogController@destroy');
 
 });

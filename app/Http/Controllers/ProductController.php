@@ -17,6 +17,7 @@ class ProductController extends Controller
 
         $slug=Str::slug($valid['title']);
 
+        
     
         Product::create([
             'title'=>$valid['title'],
@@ -50,6 +51,24 @@ class ProductController extends Controller
         return view('pages.checkout')->with([
             'product'=>$product
         ]);
+    }
+
+
+    public function upload(Request $request)
+    {
+        $validate=$request->validate([
+            'file' => 'required|image|mimes:jpg,png,jpeg,svg|max:2048'
+        ]);
+        // 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
+        if ($request->file()) {
+            $fileName = $request->input('field').'-'.time().'.'.$request->file->extension();  
+            if($request->input('field')=='display'){
+                $request->file->move(public_path('uploads/covers'), $fileName);
+            }elseif($request->input('field')=='file'){
+                $request->file->move(storage_path('uploads/books'), $fileName);
+            }
+            return response()->json(['success'=>'Uploaded',"filename"=>$fileName,'filetype'=>$request->input('field')],200);
+        }
     }
 
 

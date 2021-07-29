@@ -2006,6 +2006,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2017,7 +2024,9 @@ __webpack_require__.r(__webpack_exports__);
         price: '',
         desplayImg: '',
         file: ''
-      }
+      },
+      progress: 0,
+      type: null
     };
   },
   methods: {
@@ -2027,6 +2036,28 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         alert('Opps, something went wrong');
       });
+    },
+    uploadFile: function uploadFile(file, field) {
+      var _this = this;
+
+      var formData = new FormData();
+      formData.append('file', file);
+      formData.append('field', field);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/upload-file', formData, {
+        onUploadProgress: function onUploadProgress(progressEvent) {
+          var progress = Math.round(progressEvent.loaded / progressEvent.total * 100);
+          _this.progress = progress;
+        }
+      }).then(function (response) {
+        _this.type = response.data.filetype;
+      })["catch"](function (err) {
+        console.log("fail");
+      });
+    },
+    handleUpload: function handleUpload(e) {
+      var fileChunck = e.target.files[0];
+      var field = e.target.name;
+      this.uploadFile(fileChunck, field);
     }
   }
 });
@@ -6484,7 +6515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".product-form[data-v-6b0c4c45] {\n  max-width: 500px;\n  background: #fcfcff;\n  color: #444;\n  margin: auto;\n  padding: 10px;\n}\n.product-form input[data-v-6b0c4c45] {\n  padding: 20px;\n  border-radius: 0px;\n}", ""]);
+exports.push([module.i, ".product-form[data-v-6b0c4c45] {\n  max-width: 500px;\n  background: #fcfcff;\n  color: #444;\n  margin: auto;\n  padding: 10px;\n}\n.product-form .progress[data-v-6b0c4c45] {\n  height: 4px;\n  width: 100%;\n  background: #f7f6f6;\n}\n.product-form .progress .progress-bar[data-v-6b0c4c45] {\n  transition: 0.3s;\n  background: #21ba45;\n  height: 100%;\n  width: 0%;\n}\n.product-form input[data-v-6b0c4c45] {\n  padding: 20px;\n  border-radius: 0px;\n}", ""]);
 
 // exports
 
@@ -38504,9 +38535,90 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(0),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("Dislay images")]),
+          _vm._v(" "),
+          _vm.progress && _vm.type == "display"
+            ? _c("div", { staticClass: "progress" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "progress-bar progress-bar-striped progress-bar-animated bg-success",
+                    style: { width: _vm.progress + "%" },
+                    attrs: { role: "progressbar" }
+                  },
+                  [_vm._v(_vm._s(_vm.progress + "%"))]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control-file",
+            attrs: {
+              type: "file",
+              name: "display",
+              id: "",
+              placeholder: "",
+              "aria-describedby": "fileHelpId"
+            },
+            on: { change: _vm.handleUpload }
+          }),
+          _vm._v(" "),
+          _c(
+            "small",
+            {
+              staticClass: "form-text text-muted",
+              attrs: { id: "fileHelpId" }
+            },
+            [_vm._v("Help text")]
+          )
+        ]),
         _vm._v(" "),
-        _vm._m(1),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("File")]),
+          _vm._v(" "),
+          _vm.progress && _vm.type == "file"
+            ? _c("div", { staticClass: "progress" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "progress-bar progress-bar-striped progress-bar-animated bg-success",
+                    style: { width: _vm.progress + "%" },
+                    attrs: {
+                      role: "progressbar",
+                      "aria-valuenow": "25",
+                      "aria-valuemin": "0",
+                      "aria-valuemax": "100"
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.progress + "%"))]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control-file",
+            attrs: {
+              type: "file",
+              name: "file",
+              id: "",
+              placeholder: "",
+              "aria-describedby": "fileHelpId"
+            },
+            on: { change: _vm.handleUpload }
+          }),
+          _vm._v(" "),
+          _c(
+            "small",
+            {
+              staticClass: "form-text text-muted",
+              attrs: { id: "fileHelpId" }
+            },
+            [_vm._v("Help ")]
+          )
+        ]),
         _vm._v(" "),
         _c(
           "button",
@@ -38520,58 +38632,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Dislay images")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control-file",
-        attrs: {
-          type: "file",
-          name: "",
-          id: "",
-          placeholder: "",
-          "aria-describedby": "fileHelpId"
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        { staticClass: "form-text text-muted", attrs: { id: "fileHelpId" } },
-        [_vm._v("Help text")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("File")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control-file",
-        attrs: {
-          type: "file",
-          name: "",
-          id: "",
-          placeholder: "",
-          "aria-describedby": "fileHelpId"
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        { staticClass: "form-text text-muted", attrs: { id: "fileHelpId" } },
-        [_vm._v("Help text")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
