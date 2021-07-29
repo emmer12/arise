@@ -2046,9 +2046,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 
 
 
@@ -3317,7 +3314,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     request: function request() {
       var instance = axios__WEBPACK_IMPORTED_MODULE_0___default().create();
       instance.defaults.headers.common['X-CSRF-TOKEN'] = document.head.querySelector('meta[name="csrf-token"]').content;
-      instance.defaults.baseURL = '/canvas-ui';
+      instance.defaults.baseURL = '/blog';
 
       var requestHandler = function requestHandler(request) {
         // Add any request modifiers...
@@ -94486,7 +94483,7 @@ var render = function() {
                   "navbar-brand hover font-weight-bolder font-serif mr-3",
                 attrs: { to: { name: "posts" } }
               },
-              [_vm._v("\n                Canvas\n            ")]
+              [_vm._v("\n                Arise Room \n            ")]
             ),
             _vm._v(" "),
             _c(
@@ -94714,12 +94711,6 @@ var render = function() {
                   "col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-3"
               },
               [
-                _c("h1", { staticClass: "font-serif" }, [_vm._v("Canvas")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "lead text-secondary" }, [
-                  _vm._v("A Laravel Publishing Platform")
-                ]),
-                _vm._v(" "),
                 _c("main", { staticClass: "mt-5", attrs: { role: "main" } }, [
                   _c(
                     "div",
